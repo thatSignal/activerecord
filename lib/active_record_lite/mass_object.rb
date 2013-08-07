@@ -1,5 +1,5 @@
-class MassObject
 
+class MassObject
 
   def self.set_attrs(*attributes)
     @attributes = attributes
@@ -16,6 +16,7 @@ class MassObject
   def self.parse_all(results)
   end
 
+  #the self.class will call the class of the instance and not the mass object class
   def initialize(params = {})
     params.each do |attr_name, value|
       if self.class.attributes.include?(attr_name)
